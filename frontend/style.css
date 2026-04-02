@@ -1,0 +1,504 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #0b1520);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  width: 100%;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-link {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #00f5ff, #0072ff);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.admin-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.25);
+}
+
+/* ================= GLASS ================= */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  backdrop-filter: blur(14px);
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  padding: 80px 20px 50px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(0,255,255,0.12);
+  color: #7df9ff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #dbeafe;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.hero-btn.primary {
+  background: linear-gradient(135deg, #00f5ff, #0072ff);
+  color: #fff;
+}
+
+.hero-btn.secondary {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= SEARCH ================= */
+.search-bar-wrap {
+  max-width: 1100px;
+  margin: 0 auto 25px;
+  padding: 0 20px;
+}
+
+.search-bar-wrap input,
+#searchInputAdmin {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar-wrap input::placeholder,
+#searchInputAdmin::placeholder {
+  color: #cbd5e1;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  display: flex;
+  gap: 24px;
+  padding: 30px 20px 50px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.jobs-public-layout {
+  max-width: 1300px;
+  margin: auto;
+  padding: 10px 20px 50px;
+}
+
+.admin-panel {
+  width: 34%;
+  padding: 24px;
+  border-radius: 24px;
+  align-self: flex-start;
+  position: sticky;
+  top: 100px;
+}
+
+.jobs-panel {
+  width: 66%;
+}
+
+.public-jobs-panel {
+  width: 100%;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  color: #cbd5e1;
+  font-size: 16px;
+}
+
+.small-text {
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ================= FORM ================= */
+textarea,
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  outline: none;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #cbd5e1;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 15px;
+  transition: 0.3s ease;
+  background: linear-gradient(135deg, #00f5ff, #0072ff);
+  color: #fff;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0,255,255,0.18);
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: #111;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+  margin: 24px 0;
+}
+
+/* ================= JOB GRID ================= */
+.jobs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.job-card {
+  padding: 26px;
+  border-radius: 24px;
+  transition: 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+}
+
+.job-badge {
+  display: inline-block;
+  background: rgba(0,255,255,0.14);
+  color: #7df9ff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.job-card h2 {
+  font-size: 26px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.company-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.salary-line {
+  font-size: 18px;
+  color: #f8fafc;
+  margin-bottom: 20px;
+}
+
+.job-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.action-btn {
+  text-decoration: none;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apply-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+}
+
+.referral-btn {
+  background: linear-gradient(135deg, #a855f7, #7e22ce);
+  color: #fff;
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, #00f5ff, #0072ff);
+  color: #fff;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff4d4d, #ff7b00);
+  color: #fff;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= EMPTY ================= */
+.empty-state {
+  padding: 35px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+/* ================= SOCIAL ================= */
+.social {
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.social h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.social p {
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social a {
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #00f5ff, #0072ff);
+  color: #fff;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.social a:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= LOGIN ================= */
+.login-wrapper {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 430px;
+  padding: 30px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.login-box h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 30px 20px 40px;
+  color: #cbd5e1;
+}
+
+/* ================= UTIL ================= */
+.hidden {
+  display: none !important;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .admin-panel,
+  .jobs-panel {
+    width: 100%;
+  }
+
+  .admin-panel {
+    position: static;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .job-card h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .brand {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .job-actions {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}
+.jd-line {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #dbeafe;
+  margin-bottom: 18px;
+  white-space: pre-line;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel | AI Job Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar glass">
+    <div class="brand">🔐 Admin Control Panel</div>
+    <nav class="nav-actions">
+      <a href="index.html" class="admin-link">🌐 View Website</a>
+    </nav>
+  </header>
+
+  <!-- LOGIN SECTION -->
+  <section id="loginSection" class="admin-login-wrapper">
+    <div class="login-box glass">
+      <h2>Admin Login</h2>
+      <p>Only authorized admin can manage jobs.</p>
+
+      <input type="text" id="adminUsername" placeholder="Username" />
+      <input type="password" id="adminPassword" placeholder="Password" />
+
+      <button onclick="loginAdmin()">🔐 Login</button>
+    </div>
+  </section>
+
+  <!-- ADMIN PANEL -->
+  <main id="adminPanel" class="admin-layout" style="display:none;">
+
+    <!-- LEFT PANEL -->
+    <section class="admin-form-panel glass">
+      <div class="section-heading">
+        <h2>🤖 Add New Job</h2>
+        <p>Paste job → Auto Fill → Check → Add</p>
+      </div>
+
+      <textarea id="jobPaste" placeholder="Paste full job post here..."></textarea>
+      <button onclick="autoFillJob()">⚡ Auto Fill Job</button>
+
+      <input type="text" id="jobTitle" placeholder="Job Title" />
+      <input type="text" id="company" placeholder="Company" />
+      <input type="text" id="location" placeholder="Location" />
+      <input type="text" id="salary" placeholder="Salary" />
+      <textarea id="description" placeholder="Job Description (JD)"></textarea>
+      <input type="text" id="applyLink" placeholder="Apply Link (https://...)" />
+      <input type="text" id="referral" placeholder="Referral Link (optional)" />
+      <input type="email" id="companyEmail" placeholder="Company Email (optional)" />
+
+      <button onclick="addJob()">➕ Add Job</button>
+
+      <hr style="margin: 24px 0; border-color: rgba(255,255,255,0.08);" />
+
+      <div class="section-heading">
+        <h3>🔐 Change Admin Credentials</h3>
+      </div>
+
+      <input type="text" id="newUsername" placeholder="New Username" />
+      <input type="password" id="newPassword" placeholder="New Password" />
+      <button onclick="updateCredentials()">💾 Update Credentials</button>
+      <button onclick="logoutAdmin()" class="logout-btn">🚪 Logout</button>
+    </section>
+
+    <!-- RIGHT PANEL -->
+    <section class="jobs-panel glass">
+      <div class="section-heading">
+        <h2>🔥 Manage Posted Jobs</h2>
+        <p>Delete only from admin panel.</p>
+      </div>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 Search posted jobs..."
+        onkeyup="filterJobs()"
+      />
+
+      <div id="jobs" class="jobs-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

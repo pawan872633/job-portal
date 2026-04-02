@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "AI Job Portal",
+  "url": "https://yourdomain.com/",
+  "description": "Latest jobs in India for freshers and experienced candidates.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://yourdomain.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+  <meta charset="UTF-8" />
+  <title>Latest Jobs in India 2026 | Freshers Jobs | AI Job Portal</title>
+  <meta name="description" content="Find latest jobs in India for freshers and experienced candidates. Daily updated job portal with referral links.">
+  <meta name="keywords" content="jobs in India, fresher jobs, latest jobs 2026, private jobs, govt jobs, internships, referral jobs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="Latest Jobs in India 2026 | AI Job Portal">
+  <meta property="og:description" content="Daily updated jobs for freshers and experienced candidates.">
+  <meta property="og:type" content="website">
+   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://yourdomain.com/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar glass">
+    <div class="brand">🚀 AI Job Portal Dashboard</div>
+    <nav class="nav-actions">
+      <a href="admin.html" class="admin-link">🔐 Admin</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">🔥 Daily Updated Jobs</span>
+      <h1>Find Latest Jobs in India 2026</h1>
+      <p>Freshers jobs, referral openings, internships, private jobs and more — all in one place.</p>
+
+      <div class="hero-buttons">
+        <a href="#jobsSection" class="hero-btn primary">Browse Jobs</a>
+        <a href="https://whatsapp.com/channel/0029VbBFZfaK5cDBAVxvNj25" target="_blank" class="hero-btn secondary">Join WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search-bar-wrap">
+    <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx"
+style="position:absolute; left:-9999px; opacity:0; width:1px; height:1px;">
+  </section>
+
+  <!-- JOBS SECTION -->
+  <main class="jobs-public-layout" id="jobsSection">
+    <section class="jobs-panel public-jobs-panel">
+      <div class="section-heading">
+        <h2>🔥 Latest Jobs in India 2026</h2>
+        <p>Only verified and manually posted openings.</p>
+      </div>
+
+      <div id="jobs" class="jobs-grid"></div>
+
+      <!-- HIDDEN RESUME INPUT -->
+      <input 
+        type="file" 
+        id="resumeUpload" 
+        accept=".pdf,.doc,.docx" 
+        style="display:none"
+      >
+
+      <!-- SOCIAL -->
+      <div class="social glass">
+        <h3>📲 Join Us</h3>
+        <p>Stay updated with daily jobs & referrals</p>
+        <div class="social-links">
+          <a href="https://whatsapp.com/channel/0029VbBFZfaK5cDBAVxvNj25" target="_blank">WhatsApp</a>
+          <a href="https://www.instagram.com/rank_job?igsh=d2cwMG42bXN0bGU5" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61574506554733" target="_blank">Facebook</a>
+          <a href="https://www.linkedin.com/company/113352899" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 AI Job Portal • Built for daily job updates</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    loadJobs(false);
+  </script>
+</body>
+</html>
