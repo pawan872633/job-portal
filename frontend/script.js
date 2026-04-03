@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_BASE = "https://rankjob-backend.onrender.com/api";
 let isAdminPage = window.location.pathname.includes("admin.html");
 
 // ----------------------
